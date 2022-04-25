@@ -35,8 +35,10 @@ public class Final_Project1513 extends Application {
         rectangle.setStroke(Color.BLACK);
 
         Text message = new Text(rectangle.getWidth() / 2, rectangle.getHeight() / 2, "");
+       
         pane.getChildren().add(rectangle);
         pane.getChildren().add(message);
+        
         Scene scene = new Scene(pane, WIDTH, HEIGHT);
 
         scene.setOnMouseMoved(mouseEvent -> {
@@ -44,7 +46,8 @@ public class Final_Project1513 extends Application {
             mouseY = mouseEvent.getSceneY();
             if (isMousePointInsideRectangle(mouseX, mouseY, rectangle)) {
                 message.setText("Mouse point is inside the rectangle");
-            } else {
+            } 
+            else {
                 message.setText("Mouse point is outside the rectangle");
             }
             message.setX(mouseX);
